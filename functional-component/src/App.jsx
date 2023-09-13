@@ -7,11 +7,16 @@ import './App.css'
 // The greeting message should be passed as a prop to the component. 
 
 function App() {
+  function Greeting(props) {
+    return <div>{props.message}</div>;
+  }
   
   return (
     <>
       
-    
+      <div>
+      <Greeting message="Hello, React!" />
+    </div>
     </>
   )
 }
