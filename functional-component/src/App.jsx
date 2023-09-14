@@ -7,18 +7,19 @@ import './App.css'
 // The greeting message should be passed as a prop to the component. 
 
 function App() {
-  function Greeting(props) {
-    return <div>{props.message}</div>;
+  // Step-1: Greeting function...
+  function Greeting(props){
+    return <div>{props.message} </div>
   }
-  
   return (
     <>
-      
       <div>
-      <Greeting message="Hello, React!" />
-    </div>
+        <Greeting message="Hello,React!" />
+      </div>
+
     </>
   )
 }
-
+// In video, we get to know about function component and props...
+// Thank's for watching...
 export default App
