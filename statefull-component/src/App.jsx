@@ -1,31 +1,21 @@
 import { useState } from 'react'
 
 import './App.css'
-function Counter() {
-  const [count, setCount] = useState(0);
-
-  const incrementCount = () => {
-    setCount(count + 1);
-  };
-  const decrementCount = () => {
-    setCount(count - 1);
-  };
-
-  return (
-    <div>
-      <p>Count: {count}</p>
-      <button onClick={incrementCount}>Increment</button>
-      <button onClick={decrementCount}>decrement</button>
-    </div>
-  );
-}
+import Counter from './Counter.jsx'
+/*
+Question 2: Stateful Component
+Create a functional component called Counter that displays a counter value. 
+The component should have a button to increment the counter.
+Implement this counter functionality using React state.
+*/ 
+// Step-1: Create the component called Counter;
+// Step-2: Add Logic for increment and decrement inside the counter...
+// Thank's for watching....
 function App() {
 
   return (
     <>
-      <div>
-        <Counter/>
-      </div>
+      <Counter/>
     </>
   )
 }
