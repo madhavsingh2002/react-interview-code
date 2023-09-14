@@ -1,11 +1,12 @@
 import React from 'react'
 
-const UserInfo = (props) => {
-    if (props.isLoggedIn) {
-        return <p>Welcome, User!</p>; // Replace "User" with the actual user's name
-      } else {
-        return <p>Please log in</p>;
-      }
+const UserInfo = (prop) => {
+  if(prop.islog){
+    return <p> Welcome User!</p>
+  }
+  else{
+    return <p>Please Login</p>
+  }
 }
 
 export default UserInfo
