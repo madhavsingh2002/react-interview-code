@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
 import './App.css'
-import BlogForm from '../BlogForm.jsx';
-import BlogList from '../BlogList.jsx';
+import BlogForm from './BlogForm.jsx';
+import BlogList from './BlogList.jsx';
 
 function App() {
   const [posts, setPosts] = useState([]);
