@@ -22,10 +22,11 @@ function App() {
     const calculatedArea = Math.sqrt(s * (s - s1) * (s - s2) * (s - s3)).toFixed(2);
     setArea(calculatedArea);
   };
-
+// color: '#6677cc'
   return (
     <div>
       <h2>Triangle Area Calculation</h2>
+      <h3>Problem-13: Write a program to find the area of a triangle where three sides.</h3>
       <label>
         Side 1:
         <input type="number" value={side1} onChange={(e) => setSide1(e.target.value)} />
