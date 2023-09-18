@@ -7,59 +7,47 @@ The centigrade to Fahrenheit conversion formula is:
  cToFahr = (cTemp * 9) / 5 + 32;
 */ 
 function App() {
-  
-  const [celsius, setCelsius] = useState('');
-  const [fahrenheit, setFahrenheit] = useState('');
-  const [celsiusResult, setCelsiusResult] = useState('');
-  const [fahrenheitResult, setFahrenheitResult] = useState('');
+//  Let's solve this problem.........
+// let's create the input fields first....
+// Let's create the function....
+ const [cel,setCel] =useState('')
+ const [fah,setFah] =useState('')
+ const [celResult,setCelResult] =useState('')
+ const [fahResult,setFahResult] =useState('')
+//  let's write function for celsius to fah...
 
-  const convertToCelsius = () => {
-    const fTemp = parseFloat(fahrenheit);
-    if (!isNaN(fTemp)) {
-      const fToCel = ((fTemp - 32) * 5) / 9;
-      setCelsiusResult(`${fTemp}\xB0F is ${fToCel}\xB0C`);
-    } else {
-      setCelsiusResult('Please enter a valid Fahrenheit temperature.');
-    }
-  };
-
-  const convertToFahrenheit = () => {
-    const cTemp = parseFloat(celsius);
-    if (!isNaN(cTemp)) {
-      const cToFahr = (cTemp * 9) / 5 + 32;
-      setFahrenheitResult(`${cTemp}\xB0C is ${cToFahr}\xB0F`);
-    } else {
-      setFahrenheitResult('Please enter a valid Celsius temperature.');
-    }
-  };
-
+ const celToFah =()=>{
+  const ctemp = parseFloat(cel);
+  if(!isNaN(ctemp)){
+    const cToFah=( (ctemp * 9) / 5 + 32);
+    setFahResult(`${ctemp}\xB0C is ${cToFah}\xB0C `)
+  }
+ }// let's connect it...
+//  Let's write function for fah to celsius....
+const fahToCel =()=>{
+  const fTemp= parseFloat(fah)
+  if(!isNaN(fTemp)){
+    const fToCel = ((fTemp - 32) * 5) / 9;// this formula already given in questions
+    setCelResult(`${fTemp}\xB0C is ${fToCel}\xB0C `)
+  }
+  else{
+    setCelResult('Please Enter a valid fahrenheit temperature...')
+  }
+}
   return (
 <div>
       <h2>Problem-19:Write a program to convert temperatures to and from celsius, fahrenheit.</h2>
-      <label>
-        Enter Celsius Temperature:
-        <input
-          type="text"
-          value={celsius}
-          onChange={(e) => setCelsius(e.target.value)}
-        /> <br />
-        <br />
-        <button onClick={convertToFahrenheit}>Convert</button>
-        <p>{fahrenheitResult}</p>
-      </label>
-      <br />
-      <label>
-        Enter Fahrenheit Temperature:
-        <input
-          type="text"
-          value={fahrenheit}
-          onChange={(e) => setFahrenheit(e.target.value)}
-        /> <br /> <br />
-        <button onClick={convertToCelsius}>Convert</button>
-        <p>{celsiusResult}</p>
-      </label>
+      <label >Enter Celsius Temperature: </label>
+      <input type="number" value={cel} onChange={(e)=>setCel(e.target.value)} /> <br /><br />
+      <button onClick={celToFah}>Convert</button><br /><br />
+      <p>{fahResult} </p>
+      <label >Enter Fahrenheit Temperature: </label>
+      <input type="number" value={fah} onChange={(e)=>setFah(e.target.value)} /> <br /><br />
+      <button onClick={fahToCel}>Convert</button><br />
+      <p>{celResult} </p>
     </div>
   )
 }
+// Thank's for watching.........
 
 export default App
